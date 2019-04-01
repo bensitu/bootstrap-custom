@@ -29,8 +29,12 @@ const detectBrowsers = {
   usePhantomJS: false,
   postDetection(availableBrowser) {
 <<<<<<< HEAD
+<<<<<<< HEAD
     // On CI just use Chrome
     if (process.env.CI === true) {
+=======
+    if (process.env.CI === true || availableBrowser.includes('Chrome')) {
+>>>>>>> 060880296 (karma.conf.js: switch to `CI === true`. (#28588))
 =======
     if (process.env.CI === true || availableBrowser.includes('Chrome')) {
 >>>>>>> 060880296 (karma.conf.js: switch to `CI === true`. (#28588))
