@@ -111,6 +111,7 @@ class Toast {
   }
 
   hide() {
+<<<<<<< HEAD
     if (!this._element.classList.contains(CLASS_NAME_SHOW)) {
       return
     }
@@ -122,6 +123,13 @@ class Toast {
       return
     }
 
+=======
+    if (!this._element.classList.contains(ClassName.SHOW)) {
+      return
+    }
+
+    $(this._element).trigger(Event.HIDE)
+>>>>>>> 57ff6ee9e (Call hide() after `delay` time)
     this._close()
   }
 
@@ -157,7 +165,15 @@ class Toast {
   }
 
   _setListeners() {
+<<<<<<< HEAD
     $(this._element).on(EVENT_CLICK_DISMISS, SELECTOR_DATA_DISMISS, () => this.hide())
+=======
+    $(this._element).on(
+      Event.CLICK_DISMISS,
+      Selector.DATA_DISMISS,
+      () => this.hide()
+    )
+>>>>>>> 57ff6ee9e (Call hide() after `delay` time)
   }
 
   _close() {
