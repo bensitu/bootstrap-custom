@@ -19,7 +19,11 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <dependencies>
       <dependency id="jQuery" version="[3.0.0,4)" />
+<<<<<<< HEAD
       <dependency id="popper.js" version="[1.16.1,2)" />
+=======
+      <dependency id="popper.js" version="[1.15.0,2)" />
+>>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
     </dependencies>
     <tags>css sass mobile-first responsive front-end framework web</tags>
     <contentFiles>
