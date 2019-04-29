@@ -172,6 +172,7 @@
     "jquery": "1.9.1 - 3",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
@@ -209,12 +210,20 @@
   },
   "devDependencies": {
 >>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
+=======
+    "popper.js": "^1.15.0"
+  },
+  "devDependencies": {
+>>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
     "@babel/cli": "^7.4.4",
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-object-rest-spread": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
+=======
 >>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
 =======
 >>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
@@ -255,6 +264,7 @@
     "karma-firefox-launcher": "^1.1.0",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     "karma-qunit": "^3.0.0",
 >>>>>>> 3bf08d87c (Update devDependencies and gems.)
     "karma-sinon": "^1.0.5",
@@ -276,6 +286,14 @@
     "vnu-jar": "21.10.12"
 =======
     "popper.js": "^1.14.7",
+=======
+    "karma-qunit": "^3.1.2",
+    "karma-sinon": "^1.0.5",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.11",
+    "npm-run-all": "^4.1.5",
+    "popper.js": "^1.15.0",
+>>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
 =======
     "karma-qunit": "^3.1.2",
     "karma-sinon": "^1.0.5",
@@ -338,7 +356,11 @@
       "jquery": "1.9.1 - 3",
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "popper.js": "^1.16.1"
+=======
+      "popper.js": "^1.15.0"
+>>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
 =======
       "popper.js": "^1.15.0"
 >>>>>>> 7da9729a6 (Update (dev)Dependencies and gems.)
