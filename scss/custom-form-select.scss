@@ -1,0 +1,10 @@
+// Import Bootstrap 4 variables
+@import "variables";
+@import "mixins";
+@import "forms";
+
+// Add Bootstrap 5 form-select styles
+@import "./forms/_form-select";
+
+// Import Bootstrap's core styles after custom styles
+@import "bootstrap";
