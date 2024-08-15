@@ -71,10 +71,10 @@
   @include border-radius($form-select-border-radius-lg);
 }
 
-@if $enable-dark-mode {
-  @include color-mode(dark) {
-    .form-select {
-      --#{$prefix}form-select-bg-img: #{escape-svg($form-select-indicator-dark)};
-    }
-  }
-}
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     .form-select {
+//       --#{$prefix}form-select-bg-img: #{escape-svg($form-select-indicator-dark)};
+//     }
+//   }
+// }
