@@ -126,20 +126,11 @@ $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
 
 $enable-dark-mode:            true !default;
-$color-mode-type:             data !default; // `data` or `media-query`
 
 // Prefix for :root CSS variables
 
 $variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
 $prefix:                      $variable-prefix !default;
-
-// Gradient
-//
-// The gradient which is added to components if `$enable-gradients` is `true`
-// This gradient is also added to elements with `.bg-gradient`
-// scss-docs-start variable-gradient
-$gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
-// scss-docs-end variable-gradient
 
 
 // Spacing
