@@ -262,6 +262,14 @@ $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
 
+// scss-docs-start focus-ring-variables
+$focus-ring-width:      .25rem !default;
+$focus-ring-opacity:    .25 !default;
+$focus-ring-color:      rgba($primary, $focus-ring-opacity) !default;
+$focus-ring-blur:       0 !default;
+$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
+// scss-docs-end focus-ring-variables
+
 $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
 $caret-spacing:               $caret-width * .85 !default;
@@ -403,9 +411,14 @@ $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
-$input-btn-focus-width:       .2rem !default;
-$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
-$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+// $input-btn-focus-width:       .2rem !default;
+// $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+// $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
+$input-btn-focus-width:         $focus-ring-width !default;
+$input-btn-focus-color-opacity: $focus-ring-opacity !default;
+$input-btn-focus-color:         $focus-ring-color !default;
+$input-btn-focus-blur:          $focus-ring-blur !default;
+$input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
@@ -516,7 +529,13 @@ $input-height-lg:                       add($input-line-height-lg * 1em, add($in
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
+// scss-docs-start form-text-variables
 $form-text-margin-top:                  .25rem !default;
+$form-text-font-size:                   $small-font-size !default;
+$form-text-font-style:                  null !default;
+$form-text-font-weight:                 null !default;
+$form-text-color:                       var(--#{$prefix}secondary-color) !default;
+// scss-docs-end form-text-variables
 
 $form-check-input-gutter:               1.25rem !default;
 $form-check-input-margin-y:             .3rem !default;
@@ -680,6 +699,7 @@ $form-floating-transition:              opacity .1s ease-in-out, transform .1s e
 
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
+$form-feedback-font-style:          $form-text-font-style !default;
 $form-feedback-valid-color:         theme-color("success") !default;
 $form-feedback-invalid-color:       theme-color("danger") !default;
 
