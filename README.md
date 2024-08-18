@@ -24,6 +24,16 @@
 
 ## Table of contents
 
+Based on Bootstrap 4.6.2, added custom breakpoints and added Bootstrap 5 form-select components.
+
+Add new breakpoints (xxl: 1400px, xxxl: 1600px, xxxxl: 2000px) for large screen and add related basic utility classes for new breakpoints.
+
+Please find the new breakpoints file in custom-breakpoints.css
+
+
+
+## Table of contents
+
 - [Quick start](#quick-start)
 - [Status](#status)
 - [What's included](#whats-included)

@@ -1,8 +1,8 @@
 // Import Bootstrap 4 variables
 @import "./functions";
 @import "./variables";
-@import "./_mixins";
-@import "./_forms";
+@import "./mixins";
+// @import "./forms";
 
 
 // Dependence
@@ -111,4 +111,4 @@ $form-select-transition:          $input-transition !default;
 @import "./forms/_form-select";
 
 // Import Bootstrap's core styles after custom styles
-@import "./bootstrap.scss";
+// @import "./bootstrap.scss";
