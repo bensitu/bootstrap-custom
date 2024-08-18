@@ -22,7 +22,7 @@
 </p>
 
 
-## Table of contents
+## Custom updates
 
 Based on Bootstrap 4.6.2, added custom breakpoints and added Bootstrap 5 form-select components.
 

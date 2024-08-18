@@ -656,6 +656,19 @@ $custom-file-text: (
   en: "Browse"
 ) !default;
 
+// scss-docs-start form-floating-variables
+$form-floating-height:                  add(3.5rem, $input-height-border) !default;
+$form-floating-line-height:             1.25 !default;
+$form-floating-padding-x:               $input-padding-x !default;
+$form-floating-padding-y:               1rem !default;
+$form-floating-input-padding-t:         1.625rem !default;
+$form-floating-input-padding-b:         .625rem !default;
+$form-floating-label-height:            1.5em !default;
+$form-floating-label-opacity:           .65 !default;
+$form-floating-label-transform:         scale(.85) translateY(-.5rem) translateX(.15rem) !default;
+$form-floating-label-disabled-color:    $gray-600 !default;
+$form-floating-transition:              opacity .1s ease-in-out, transform .1s ease-in-out !default;
+// scss-docs-end form-floating-variables
 
 // Form validation
 
@@ -668,6 +681,11 @@ $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
 $form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
 $form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
+
+$form-valid-color:                  $form-feedback-valid-color;
+$form-valid-border-color:           $form-feedback-valid-color;
+$form-invalid-color:                $form-feedback-invalid-color;
+$form-invalid-border-color:         $form-feedback-invalid-color;
 
 $form-validation-states: () !default;
 $form-validation-states: map-merge(

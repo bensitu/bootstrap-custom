@@ -2,8 +2,8 @@
 @import "./functions";
 @import "./variables";
 @import "./mixins";
-// @import "./forms";
-
+// @import "./forms/form-select";
+// @import "./forms/validation";
 
 // Dependence
 $box-shadow-inset:            inset 0 1px 2px rgba($black, .075) !default;
@@ -106,9 +106,10 @@ $form-select-border-radius-lg:    $input-border-radius-lg !default;
 $form-select-transition:          $input-transition !default;
 // scss-docs-end form-select-variables
 
-
 // Add Bootstrap 5 form-select styles
 @import "./forms/_form-select";
+@import "./forms/validation";
+
 
 // Import Bootstrap's core styles after custom styles
 // @import "./bootstrap.scss";
