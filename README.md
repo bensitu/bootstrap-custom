@@ -28,7 +28,8 @@ Based on Bootstrap 4.6.2, added custom breakpoints(xxl, xxxl and xxxxl).
 
 The new breakpoints (xxl: 1400px, xxxl: 1600px, xxxxl: 2000px) are for large screens and added the related basic utility classes for new breakpoints.
 
-Please find the new breakpoints file in bootstrap-custom-breakpoints.css in dist folder.
+In dist folder, please find the new breakpoints file in bootstrap-custom-breakpoints.css and the custom styles in boostrap-custom-style.css.
+
 
 
 
@@ -88,6 +89,14 @@ Within the download you'll find the following directories and files, logically g
 bootstrap/
 └── dist/
     ├── css/
+    │   ├── bootstrap-custom-breakpoints.css
+    │   ├── bootstrap-custom-breakpoints.css.map
+    │   ├── bootstrap-custom-breakpoints.min.css
+    │   ├── bootstrap-custom-breakpoints.min.css.map
+    │   ├── bootstrap-custom-styles.css
+    │   ├── bootstrap-custom-styles.css.map
+    │   ├── bootstrap-custom-styles.min.css
+    │   ├── bootstrap-custom-styles.min.css.map
     │   ├── bootstrap-grid.css
     │   ├── bootstrap-grid.css.map
     │   ├── bootstrap-grid.min.css
