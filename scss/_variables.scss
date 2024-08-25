@@ -107,6 +107,7 @@ $escaped-characters: (
   (")", "%29"),
 ) !default;
 
+
 // Options
 //
 // Quickly modify global styling by enabling or disabling optional features.
@@ -124,13 +125,6 @@ $enable-print-styles:                         true !default;
 $enable-responsive-font-sizes:                false !default;
 $enable-validation-icons:                     true !default;
 $enable-deprecation-messages:                 true !default;
-
-$enable-dark-mode:            true !default;
-
-// Prefix for :root CSS variables
-
-$variable-prefix:             bs- !default; // Deprecated in v5.2.0 for the shorter `$prefix`
-$prefix:                      $variable-prefix !default;
 
 
 // Spacing
@@ -232,9 +226,6 @@ $grid-columns:                12 !default;
 $grid-gutter-width:           30px !default;
 $grid-row-columns:            6 !default;
 
-// Container padding
-
-$container-padding-x: $grid-gutter-width !default;
 
 // Components
 //
@@ -244,9 +235,7 @@ $line-height-lg:              1.5 !default;
 $line-height-sm:              1.5 !default;
 
 $border-width:                1px !default;
-$border-style:                solid !default;
 $border-color:                $gray-300 !default;
-$border-color-translucent:    rgba($black, .175) !default;
 
 $border-radius:               .25rem !default;
 $border-radius-lg:            .3rem !default;
@@ -258,17 +247,8 @@ $box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
 
-
 $component-active-color:      $white !default;
 $component-active-bg:         theme-color("primary") !default;
-
-// scss-docs-start focus-ring-variables
-$focus-ring-width:      .25rem !default;
-$focus-ring-opacity:    .25 !default;
-$focus-ring-color:      rgba($primary, $focus-ring-opacity) !default;
-$focus-ring-blur:       0 !default;
-$focus-ring-box-shadow: 0 0 $focus-ring-blur $focus-ring-width $focus-ring-color !default;
-// scss-docs-end focus-ring-variables
 
 $caret-width:                 .3em !default;
 $caret-vertical-align:        $caret-width * .85 !default;
@@ -411,14 +391,9 @@ $input-btn-font-family:       null !default;
 $input-btn-font-size:         $font-size-base !default;
 $input-btn-line-height:       $line-height-base !default;
 
-// $input-btn-focus-width:       .2rem !default;
-// $input-btn-focus-color:       rgba($component-active-bg, .25) !default;
-// $input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
-$input-btn-focus-width:         $focus-ring-width !default;
-$input-btn-focus-color-opacity: $focus-ring-opacity !default;
-$input-btn-focus-color:         $focus-ring-color !default;
-$input-btn-focus-blur:          $focus-ring-blur !default;
-$input-btn-focus-box-shadow:    $focus-ring-box-shadow !default;
+$input-btn-focus-width:       .2rem !default;
+$input-btn-focus-color:       rgba($component-active-bg, .25) !default;
+$input-btn-focus-box-shadow:  0 0 0 $input-btn-focus-width $input-btn-focus-color !default;
 
 $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
@@ -529,13 +504,7 @@ $input-height-lg:                       add($input-line-height-lg * 1em, add($in
 
 $input-transition:                      border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-// scss-docs-start form-text-variables
 $form-text-margin-top:                  .25rem !default;
-$form-text-font-size:                   $small-font-size !default;
-$form-text-font-style:                  null !default;
-$form-text-font-weight:                 null !default;
-$form-text-color:                       var(--#{$prefix}secondary-color) !default;
-// scss-docs-end form-text-variables
 
 $form-check-input-gutter:               1.25rem !default;
 $form-check-input-margin-y:             .3rem !default;
@@ -618,7 +587,6 @@ $custom-select-indicator:           url("data:image/svg+xml,<svg xmlns='http://w
 $custom-select-background:          escape-svg($custom-select-indicator) right $custom-select-padding-x center / $custom-select-bg-size no-repeat !default; // Used so we can have multiple background elements (e.g., arrow and feedback icon)
 
 $custom-select-feedback-icon-padding-right: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
-$custom-select-feedback-icon-padding-end: add(1em * .75, (2 * $custom-select-padding-y * .75) + $custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-position:      center right ($custom-select-padding-x + $custom-select-indicator-padding) !default;
 $custom-select-feedback-icon-size:          $input-height-inner-half $input-height-inner-half !default;
 
@@ -682,25 +650,11 @@ $custom-file-text: (
   en: "Browse"
 ) !default;
 
-// scss-docs-start form-floating-variables
-$form-floating-height:                  add(3.5rem, $input-height-border) !default;
-$form-floating-line-height:             1.25 !default;
-$form-floating-padding-x:               $input-padding-x !default;
-$form-floating-padding-y:               1rem !default;
-$form-floating-input-padding-t:         1.625rem !default;
-$form-floating-input-padding-b:         .625rem !default;
-$form-floating-label-height:            1.5em !default;
-$form-floating-label-opacity:           .65 !default;
-$form-floating-label-transform:         scale(.85) translateY(-.5rem) translateX(.15rem) !default;
-$form-floating-label-disabled-color:    $gray-600 !default;
-$form-floating-transition:              opacity .1s ease-in-out, transform .1s ease-in-out !default;
-// scss-docs-end form-floating-variables
 
 // Form validation
 
 $form-feedback-margin-top:          $form-text-margin-top !default;
 $form-feedback-font-size:           $small-font-size !default;
-$form-feedback-font-style:          $form-text-font-style !default;
 $form-feedback-valid-color:         theme-color("success") !default;
 $form-feedback-invalid-color:       theme-color("danger") !default;
 
@@ -708,11 +662,6 @@ $form-feedback-icon-valid-color:    $form-feedback-valid-color !default;
 $form-feedback-icon-valid:          url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'><path fill='#{$form-feedback-icon-valid-color}' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/></svg>") !default;
 $form-feedback-icon-invalid-color:  $form-feedback-invalid-color !default;
 $form-feedback-icon-invalid:        url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='#{$form-feedback-icon-invalid-color}' viewBox='0 0 12 12'><circle cx='6' cy='6' r='4.5'/><path stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/><circle cx='6' cy='8.2' r='.6' fill='#{$form-feedback-icon-invalid-color}' stroke='none'/></svg>") !default;
-
-$form-valid-color:                  $form-feedback-valid-color;
-$form-valid-border-color:           $form-feedback-valid-color;
-$form-invalid-color:                $form-feedback-invalid-color;
-$form-invalid-border-color:         $form-feedback-invalid-color;
 
 $form-validation-states: () !default;
 $form-validation-states: map-merge(

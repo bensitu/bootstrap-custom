@@ -1,5 +1,5 @@
 {
-  "root": false,
+  "root": true,
   "extends": [
     "plugin:import/errors",
     "plugin:import/warnings",

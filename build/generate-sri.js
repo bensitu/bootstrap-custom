@@ -40,15 +40,7 @@ const files = [
     configPropertyName: 'js_bundle_hash'
   },
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     file: `site/static/docs/${pkg.config.version_short}/assets/js/vendor/jquery.slim.min.js`,
-=======
-    file: `site/docs/${pkg.version_short}/assets/js/vendor/jquery.slim.min.js`,
->>>>>>> 27287a688 (Update devDependencies including jQuery to v3.4.1.)
-=======
-    file: `site/docs/${pkg.version_short}/assets/js/vendor/jquery.slim.min.js`,
->>>>>>> 27287a688 (Update devDependencies including jQuery to v3.4.1.)
     configPropertyName: 'jquery_hash'
   },
   {

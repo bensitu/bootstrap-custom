@@ -13,65 +13,72 @@
 
   var $__default = /*#__PURE__*/_interopDefaultLegacy($);
 
-  /**
-   * --------------------------------------------------------------------------
-   * Bootstrap (v4.6.2): button.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
-   * --------------------------------------------------------------------------
-   */
+  function _defineProperties(target, props) {
+    for (var i = 0; i < props.length; i++) {
+      var descriptor = props[i];
+      descriptor.enumerable = descriptor.enumerable || false;
+      descriptor.configurable = true;
+      if ("value" in descriptor) descriptor.writable = true;
+      Object.defineProperty(target, descriptor.key, descriptor);
+    }
+  }
+  function _createClass(Constructor, protoProps, staticProps) {
+    if (protoProps) _defineProperties(Constructor.prototype, protoProps);
+    if (staticProps) _defineProperties(Constructor, staticProps);
+    Object.defineProperty(Constructor, "prototype", {
+      writable: false
+    });
+    return Constructor;
+  }
 
   /**
    * Constants
    */
 
-  const NAME = 'button';
-  const VERSION = '4.6.2';
-  const DATA_KEY = 'bs.button';
-  const EVENT_KEY = `.${DATA_KEY}`;
-  const DATA_API_KEY = '.data-api';
-  const JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
-  const CLASS_NAME_ACTIVE = 'active';
-  const CLASS_NAME_BUTTON = 'btn';
-  const CLASS_NAME_FOCUS = 'focus';
-  const EVENT_CLICK_DATA_API = `click${EVENT_KEY}${DATA_API_KEY}`;
-  const EVENT_FOCUS_BLUR_DATA_API = `focus${EVENT_KEY}${DATA_API_KEY} ` + `blur${EVENT_KEY}${DATA_API_KEY}`;
-  const EVENT_LOAD_DATA_API = `load${EVENT_KEY}${DATA_API_KEY}`;
-  const SELECTOR_DATA_TOGGLE_CARROT = '[data-toggle^="button"]';
-  const SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]';
-  const SELECTOR_DATA_TOGGLE = '[data-toggle="button"]';
-  const SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn';
-  const SELECTOR_INPUT = 'input:not([type="hidden"])';
-  const SELECTOR_ACTIVE = '.active';
-  const SELECTOR_BUTTON = '.btn';
+  var NAME = 'button';
+  var VERSION = '4.6.2';
+  var DATA_KEY = 'bs.button';
+  var EVENT_KEY = "." + DATA_KEY;
+  var DATA_API_KEY = '.data-api';
+  var JQUERY_NO_CONFLICT = $__default["default"].fn[NAME];
+  var CLASS_NAME_ACTIVE = 'active';
+  var CLASS_NAME_BUTTON = 'btn';
+  var CLASS_NAME_FOCUS = 'focus';
+  var EVENT_CLICK_DATA_API = "click" + EVENT_KEY + DATA_API_KEY;
+  var EVENT_FOCUS_BLUR_DATA_API = "focus" + EVENT_KEY + DATA_API_KEY + " " + ("blur" + EVENT_KEY + DATA_API_KEY);
+  var EVENT_LOAD_DATA_API = "load" + EVENT_KEY + DATA_API_KEY;
+  var SELECTOR_DATA_TOGGLE_CARROT = '[data-toggle^="button"]';
+  var SELECTOR_DATA_TOGGLES = '[data-toggle="buttons"]';
+  var SELECTOR_DATA_TOGGLE = '[data-toggle="button"]';
+  var SELECTOR_DATA_TOGGLES_BUTTONS = '[data-toggle="buttons"] .btn';
+  var SELECTOR_INPUT = 'input:not([type="hidden"])';
+  var SELECTOR_ACTIVE = '.active';
+  var SELECTOR_BUTTON = '.btn';
 
   /**
    * Class definition
    */
-
-  class Button {
-    constructor(element) {
+  var Button = /*#__PURE__*/function () {
+    function Button(element) {
       this._element = element;
       this.shouldAvoidTriggerChange = false;
     }
 
     // Getters
-    static get VERSION() {
-      return VERSION;
-    }
-
+    var _proto = Button.prototype;
     // Public
-    toggle() {
-      let triggerChangeEvent = true;
-      let addAriaPressed = true;
-      const rootElement = $__default["default"](this._element).closest(SELECTOR_DATA_TOGGLES)[0];
+    _proto.toggle = function toggle() {
+      var triggerChangeEvent = true;
+      var addAriaPressed = true;
+      var rootElement = $__default["default"](this._element).closest(SELECTOR_DATA_TOGGLES)[0];
       if (rootElement) {
-        const input = this._element.querySelector(SELECTOR_INPUT);
+        var input = this._element.querySelector(SELECTOR_INPUT);
         if (input) {
           if (input.type === 'radio') {
             if (input.checked && this._element.classList.contains(CLASS_NAME_ACTIVE)) {
               triggerChangeEvent = false;
             } else {
-              const activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
+              var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
               if (activeElement) {
                 $__default["default"](activeElement).removeClass(CLASS_NAME_ACTIVE);
               }
@@ -98,17 +105,18 @@
           $__default["default"](this._element).toggleClass(CLASS_NAME_ACTIVE);
         }
       }
-    }
-    dispose() {
+    };
+    _proto.dispose = function dispose() {
       $__default["default"].removeData(this._element, DATA_KEY);
       this._element = null;
     }
 
     // Static
-    static _jQueryInterface(config, avoidTriggerChange) {
+    ;
+    Button._jQueryInterface = function _jQueryInterface(config, avoidTriggerChange) {
       return this.each(function () {
-        const $element = $__default["default"](this);
-        let data = $element.data(DATA_KEY);
+        var $element = $__default["default"](this);
+        var data = $element.data(DATA_KEY);
         if (!data) {
           data = new Button(this);
           $element.data(DATA_KEY, data);
@@ -118,23 +126,28 @@
           data[config]();
         }
       });
-    }
-  }
-
+    };
+    _createClass(Button, null, [{
+      key: "VERSION",
+      get: function get() {
+        return VERSION;
+      }
+    }]);
+    return Button;
+  }();
   /**
    * Data API implementation
    */
-
-  $__default["default"](document).on(EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, event => {
-    let button = event.target;
-    const initialButton = button;
+  $__default["default"](document).on(EVENT_CLICK_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
+    var button = event.target;
+    var initialButton = button;
     if (!$__default["default"](button).hasClass(CLASS_NAME_BUTTON)) {
       button = $__default["default"](button).closest(SELECTOR_BUTTON)[0];
     }
     if (!button || button.hasAttribute('disabled') || button.classList.contains('disabled')) {
       event.preventDefault(); // work around Firefox bug #1540995
     } else {
-      const inputBtn = button.querySelector(SELECTOR_INPUT);
+      var inputBtn = button.querySelector(SELECTOR_INPUT);
       if (inputBtn && (inputBtn.hasAttribute('disabled') || inputBtn.classList.contains('disabled'))) {
         event.preventDefault(); // work around Firefox bug #1540995
         return;
@@ -143,18 +156,18 @@
         Button._jQueryInterface.call($__default["default"](button), 'toggle', initialButton.tagName === 'INPUT');
       }
     }
-  }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, event => {
-    const button = $__default["default"](event.target).closest(SELECTOR_BUTTON)[0];
+  }).on(EVENT_FOCUS_BLUR_DATA_API, SELECTOR_DATA_TOGGLE_CARROT, function (event) {
+    var button = $__default["default"](event.target).closest(SELECTOR_BUTTON)[0];
     $__default["default"](button).toggleClass(CLASS_NAME_FOCUS, /^focus(in)?$/.test(event.type));
   });
-  $__default["default"](window).on(EVENT_LOAD_DATA_API, () => {
+  $__default["default"](window).on(EVENT_LOAD_DATA_API, function () {
     // ensure correct active class is set to match the controls' actual values/states
 
     // find all checkboxes/readio buttons inside data-toggle groups
-    let buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLES_BUTTONS));
-    for (let i = 0, len = buttons.length; i < len; i++) {
-      const button = buttons[i];
-      const input = button.querySelector(SELECTOR_INPUT);
+    var buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLES_BUTTONS));
+    for (var i = 0, len = buttons.length; i < len; i++) {
+      var button = buttons[i];
+      var input = button.querySelector(SELECTOR_INPUT);
       if (input.checked || input.hasAttribute('checked')) {
         button.classList.add(CLASS_NAME_ACTIVE);
       } else {
@@ -164,12 +177,12 @@
 
     // find all button toggles
     buttons = [].slice.call(document.querySelectorAll(SELECTOR_DATA_TOGGLE));
-    for (let i = 0, len = buttons.length; i < len; i++) {
-      const button = buttons[i];
-      if (button.getAttribute('aria-pressed') === 'true') {
-        button.classList.add(CLASS_NAME_ACTIVE);
+    for (var _i = 0, _len = buttons.length; _i < _len; _i++) {
+      var _button = buttons[_i];
+      if (_button.getAttribute('aria-pressed') === 'true') {
+        _button.classList.add(CLASS_NAME_ACTIVE);
       } else {
-        button.classList.remove(CLASS_NAME_ACTIVE);
+        _button.classList.remove(CLASS_NAME_ACTIVE);
       }
     }
   });
@@ -180,7 +193,7 @@
 
   $__default["default"].fn[NAME] = Button._jQueryInterface;
   $__default["default"].fn[NAME].Constructor = Button;
-  $__default["default"].fn[NAME].noConflict = () => {
+  $__default["default"].fn[NAME].noConflict = function () {
     $__default["default"].fn[NAME] = JQUERY_NO_CONFLICT;
     return Button._jQueryInterface;
   };

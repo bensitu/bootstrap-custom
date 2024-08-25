@@ -32,6 +32,7 @@
   height: 540px;
   background-color: #333;
   border-radius: 21px;
+  -webkit-transform: rotate(30deg);
   transform: rotate(30deg);
 }
 
@@ -60,10 +61,12 @@
  */
 
 .flex-equal > * {
+  -ms-flex: 1;
   flex: 1;
 }
 @media (min-width: 768px) {
   .flex-md-equal > * {
+    -ms-flex: 1;
     flex: 1;
   }
 }

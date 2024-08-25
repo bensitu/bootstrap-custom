@@ -1,22 +1,8 @@
 # Ignore docs files
-<<<<<<< HEAD
 /_site/
 # Hugo files
 /resources/
 /.hugo_build.lock
-=======
-/_gh_pages/
-/site/.jekyll-metadata
-/site/docs/**/dist/
-# Hugo folders
-/site/static/**/dist/
-/resources/
-
-# Ignore ruby/bundler files
-/.bundle/
-/vendor/
-/.ruby-version
->>>>>>> 72a1437da (.gitignore: add the Hugo folders.)
 
 # Numerous always-ignore extensions
 *.diff

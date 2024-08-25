@@ -24,11 +24,11 @@
 
 ## Custom updates
 
-Based on Bootstrap 4.6.2, added custom breakpoints and added Bootstrap 5 form-select components.
+Based on Bootstrap 4.6.2, added custom breakpoints(xxl, xxxl and xxxxl).
 
-Add new breakpoints (xxl: 1400px, xxxl: 1600px, xxxxl: 2000px) for large screen and add related basic utility classes for new breakpoints.
+The new breakpoints (xxl: 1400px, xxxl: 1600px, xxxxl: 2000px) are for large screens and added the related basic utility classes for new breakpoints.
 
-Please find the new breakpoints file in custom-breakpoints.css
+Please find the new breakpoints file in bootstrap-custom-breakpoints.css in dist folder.
 
 
 
